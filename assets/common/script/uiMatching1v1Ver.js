@@ -8,7 +8,7 @@ cc.Class({
 
     onLoad() {
         this._super();
-        this.nodeDict["quit"].on("click", this.leaveRoom, this);
+        Game.UIManager.btnMethodBind(this.nodeDict["quit"], "leaveRoom", this);
 
         clientEvent.on(clientEvent.eventType.joinRoomResponse, this.joinRoomResponse, this);
         clientEvent.on(clientEvent.eventType.joinRoomNotify, this.joinRoomNotify, this);

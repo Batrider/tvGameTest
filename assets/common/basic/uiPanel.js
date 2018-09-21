@@ -3,12 +3,11 @@ cc.Class({
     onLoad: function() {
         this.nodeLink();
         this.btnLink();
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-    },
-
-    start() {
         this.focusBtnIndex = 0;
-        this.focusTarget(0);
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
+        setTimeout(function() {
+            this.focusTarget(0);
+        }.bind(this), 250);
     },
 
     nodeLink() {

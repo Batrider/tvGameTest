@@ -31,7 +31,7 @@ cc.Class({
         this.rank1Info = this.rank1Node.getComponent("rankUserInfo");
         this.rank2Info = this.rank2Node.getComponent("rankUserInfo");
         this.rank3Info = this.rank3Node.getComponent("rankUserInfo");
-        this.nodeDict["exit"].on("click", this.quit, this);
+        Game.UIManager.btnMethodBind(this.nodeDict["exit"], "quit", this);
     },
 
     quit: function() {

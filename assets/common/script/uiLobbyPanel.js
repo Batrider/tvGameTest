@@ -3,7 +3,6 @@ var mvs = require("Matchvs");
 cc.Class({
     extends: uiPanel,
     start() {
-        this._super();
         Game.UIManager.btnMethodBind(this.nodeDict["randomRoom"], "randomRoom", this);
         Game.UIManager.btnMethodBind(this.nodeDict["createRoom"], "createRoom", this);
         Game.UIManager.btnMethodBind(this.nodeDict["joinRoom"], "joinRoom", this);

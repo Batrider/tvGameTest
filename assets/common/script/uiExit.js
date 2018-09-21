@@ -6,8 +6,9 @@ cc.Class({
 
     onLoad() {
         this._super();
-        this.nodeDict["sure"].on("click", this.sure, this);
-        this.nodeDict["close"].on("click", this.close, this);
+        Game.UIManager.btnMethodBind(this.nodeDict["sure"], "sure", this);
+        Game.UIManager.btnMethodBind(this.nodeDict["close"], "close", this);
+
     },
 
     close() {

@@ -10,10 +10,11 @@ cc.Class({
         this.playerCnt = GLB.PLAYER_COUNTS[0];
         this.playerCntLb.string = this.playerCnt;
         this.refreshBtnState();
-        this.nodeDict["quit"].on("click", this.quit, this);
-        this.nodeDict["addNode"].on("click", this.addPlayerCount, this);
-        this.nodeDict["subNode"].on("click", this.subPlayerCount, this);
-        this.nodeDict["create"].on("click", this.createRoom, this);
+
+        Game.UIManager.btnMethodBind(this.nodeDict["quit"], "quit", this);
+        Game.UIManager.btnMethodBind(this.nodeDict["addNode"], "addPlayerCount", this);
+        Game.UIManager.btnMethodBind(this.nodeDict["subNode"], "subPlayerCount", this);
+        Game.UIManager.btnMethodBind(this.nodeDict["create"], "createRoom", this);
 
         clientEvent.on(clientEvent.eventType.createRoomResponse, this.createRoomResponse, this);
     },
@@ -67,7 +68,6 @@ cc.Class({
         Game.GameManager.blockInput();
 
         var create = new mvs.CreateRoomInfo();
-        create.roomName = this.nodeDict["roomName"].getComponent(cc.EditBox).string;
         GLB.MAX_PLAYER_COUNT = this.playerCnt;
         create.maxPlayer = GLB.MAX_PLAYER_COUNT;
         create.mode = 0;

@@ -24,7 +24,8 @@ cc.Class({
         this.player2.node.active = false;
         this.player3 = this.nodeDict["player3"].getComponent("resultPlayerIcon");
         this.player3.node.active = false;
-        this.nodeDict["quit"].on("click", this.quit, this);
+        Game.UIManager.btnMethodBind(this.nodeDict["quit"], "quit", this);
+
     },
 
     setData: function(data) {

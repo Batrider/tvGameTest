@@ -2,16 +2,11 @@ var uiPanel = require("uiPanel");
 var mvs = require("Matchvs");
 cc.Class({
     extends: uiPanel,
-
-    properties: {},
-
     start() {
         this.roomPrefab = this.nodeDict["roomPrefab"];
-        this.editBox = this.nodeDict["editBox"].getComponent(cc.EditBox);
         this.roomPrefab.active = false;
-        this.nodeDict["search"].on("click", this.search, this);
-        this.nodeDict["quit"].on("click", this.quit, this);
 
+        Game.UIManager.btnMethodBind(this.nodeDict["quit"], "quit", this);
 
         this.rooms = [];
 
@@ -21,9 +16,7 @@ cc.Class({
 
         this.getRoomList();
         this.roomRqId = setInterval(function() {
-            if (this.editBox.string === '') {
-                this.getRoomList();
-            }
+            this.getRoomList();
         }.bind(this), 5000);
     },
 
@@ -39,7 +32,7 @@ cc.Class({
             order: 0,
             pageNo: 0,
             pageSize: 20
-        }
+        };
         mvs.engine.getRoomListEx(filter);
     },
 

@@ -8,7 +8,6 @@ cc.Class({
     },
 
     start() {
-        this._super();
         Game.UIManager.btnMethodBind(this.nodeDict["start"], "matchVsInit", this);
     },
 

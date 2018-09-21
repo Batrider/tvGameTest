@@ -12,8 +12,9 @@ cc.Class({
         this.owner = 0;
         this.playerPrefab = this.nodeDict["player"];
         this.playerPrefab.active = false;
-        this.nodeDict["quit"].on("click", this.quit, this);
-        this.nodeDict["startGame"].on("click", this.startGame, this);
+        
+        Game.UIManager.btnMethodBind(this.nodeDict["quit"], "quit", this);
+        Game.UIManager.btnMethodBind(this.nodeDict["startGame"], "startGame", this);
 
 
         clientEvent.on(clientEvent.eventType.joinRoomNotify, this.joinRoomNotify, this);

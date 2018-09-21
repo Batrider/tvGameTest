@@ -2360,7 +2360,7 @@
       "__id__": 72
     },
     "_enabled": true,
-    "transition": 0,
+    "transition": 1,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 211,
@@ -2370,9 +2370,9 @@
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 171,
+      "g": 241,
+      "b": 227,
       "a": 255
     },
     "duration": 0.1,
@@ -2423,9 +2423,6 @@
       "__id__": 1
     },
     "_enabled": true,
-    "showAnimation": 0,
-    "hideAnimation": 0,
-    "isUseMask": false,
     "winAudio": {
       "__uuid__": "1ceb701f-3aa5-45a6-9daf-c261fabbecbf"
     },

@@ -17,8 +17,8 @@ cc.Class({
             playerTemp.position = cc.v2(0, 0);
             this.playerIcons.push(playerTemp);
         }
+        Game.UIManager.btnMethodBind(this.nodeDict["quit"], "leaveRoom", this);
 
-        this.nodeDict["quit"].on("click", this.leaveRoom, this);
 
         clientEvent.on(clientEvent.eventType.joinRoomResponse, this.joinRoomResponse, this);
         clientEvent.on(clientEvent.eventType.joinRoomNotify, this.joinRoomNotify, this);

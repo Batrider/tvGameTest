@@ -2309,9 +2309,9 @@
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 123,
+      "g": 236,
+      "b": 209,
       "a": 255
     },
     "duration": 0.1,
@@ -3460,9 +3460,6 @@
       "__id__": 1
     },
     "_enabled": true,
-    "showAnimation": 0,
-    "hideAnimation": 0,
-    "isUseMask": false,
     "rankPrefab": {
       "__id__": 83
     },
