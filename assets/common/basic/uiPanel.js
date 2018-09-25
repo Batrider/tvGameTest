@@ -1,13 +1,25 @@
 cc.Class({
     extends: cc.Component,
+
+    properties: {
+        defaultBtn: cc.Button
+    },
+
     onLoad: function() {
         this.nodeLink();
-        this.btnLink();
-        this.focusBtnIndex = 0;
+        this.componentLink();
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        setTimeout(function() {
-            this.focusTarget(0);
-        }.bind(this), 250);
+
+        this.componentIndex = 0;
+        for (var i = 0; i < this.componentDict.length; i++) {
+            if (this.componentDict[i] === this.defaultBtn) {
+                this.componentIndex = i;
+                break;
+            }
+        }
+        if (this.componentDict[this.componentIndex] instanceof cc.Button) {
+            this.componentDict[this.componentIndex].node.getComponent(cc.Sprite).spriteFrame = this.componentDict[this.componentIndex].hoverSprite;
+        }
     },
 
     nodeLink() {
@@ -31,36 +43,68 @@ cc.Class({
         linkWidget(this.node, this.nodeDict);
     },
 
-    btnLink() {
-        this.btnNodeDict = [];
+    // [ScrollView,Button]
+    componentLink() {
+        this.componentDict = [];
         var linkWidget = function(self, nodeDict) {
             var children = self.children;
             for (var i = 0; i < children.length; i++) {
-                var btn = children[i].getComponent(cc.Button);
-                if (btn) {
-                    nodeDict.push(btn);
-                }
-                if (children[i].childrenCount > 0) {
-                    linkWidget(children[i], nodeDict);
+                if (children[i].active) {
+                    var btn = children[i].getComponent(cc.Button);
+                    if (btn) {
+                        nodeDict.push(btn);
+                    } else {
+                        var scrollView = children[i].getComponent(cc.ScrollView);
+                        if (scrollView) {
+                            nodeDict.push(scrollView);
+                        }
+                    }
+                    if (children[i].childrenCount > 0) {
+                        linkWidget(children[i], nodeDict);
+                    }
                 }
             }
         }.bind(this);
-        linkWidget(this.node, this.btnNodeDict);
+        linkWidget(this.node, this.componentDict);
     },
 
     focusTarget(delta) {
-        for (var i = 0; i < this.btnNodeDict.length; i++) {
-            this.btnNodeDict[i].node.color = this.btnNodeDict[i].normalColor;
+        // reset btn sprite
+        for (var i = 0; i < this.componentDict.length; i++) {
+            if (this.componentDict[i] instanceof cc.Button) {
+                this.componentDict[i].node.getComponent(cc.Sprite).spriteFrame
+                    = this.componentDict[i].normalSprite;
+            }
+        }
+        // in button
+        if (this.componentDict[this.componentIndex] instanceof cc.Button) {
+            this.componentIndex += delta;
+        }
+        // in scrollView
+        else if (this.componentDict[this.componentIndex] instanceof cc.ScrollView) {
+            let curScrollOffset = this.componentDict[this.componentIndex].getScrollOffset();
+            let maxScrollOffset = this.componentDict[this.componentIndex].getMaxScrollOffset();
+            let targetOffsetY = curScrollOffset.y + 102 * delta;
+            if (targetOffsetY > maxScrollOffset.y || targetOffsetY < 0) {
+                this.componentIndex += delta;
+            } else {
+                targetOffsetY = Math.min(Math.max(0, targetOffsetY), maxScrollOffset.y);
+                this.componentDict[this.componentIndex].scrollToOffset(cc.v2(maxScrollOffset.x / 2, targetOffsetY), 0);
+            }
         }
 
-        this.focusBtnIndex += delta;
-        if (this.focusBtnIndex >= this.btnNodeDict.length) {
-            this.focusBtnIndex = 0;
+        // check index
+        if (this.componentIndex >= this.componentDict.length) {
+            this.componentIndex = 0;
         }
-        if (this.focusBtnIndex < 0) {
-            this.focusBtnIndex = this.btnNodeDict.length - 1;
+        if (this.componentIndex < 0) {
+            this.componentIndex = this.componentDict.length - 1;
         }
-        this.btnNodeDict[this.focusBtnIndex].node.color = this.btnNodeDict[this.focusBtnIndex].hoverColor;
+        // set btn sprite
+        if (this.componentDict[this.componentIndex] instanceof cc.Button) {
+            this.componentDict[this.componentIndex].node.getComponent(cc.Sprite).spriteFrame
+                = this.componentDict[this.componentIndex].hoverSprite;
+        }
     },
 
     onKeyDown: function(event) {
@@ -76,7 +120,7 @@ cc.Class({
                     this.focusTarget(1);
                     break;
                 case 13:
-                    this.callBtnMethod(this.btnNodeDict[this.focusBtnIndex]);
+                    this.callBtnMethod(this.componentDict[this.componentIndex]);
                     break;
             }
         }

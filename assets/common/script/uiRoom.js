@@ -12,7 +12,7 @@ cc.Class({
         this.owner = 0;
         this.playerPrefab = this.nodeDict["player"];
         this.playerPrefab.active = false;
-        
+
         Game.UIManager.btnMethodBind(this.nodeDict["quit"], "quit", this);
         Game.UIManager.btnMethodBind(this.nodeDict["startGame"], "startGame", this);
 

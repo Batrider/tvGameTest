@@ -4,20 +4,19 @@ cc.Class({
     extends: uiPanel,
     start() {
         this.roomPrefab = this.nodeDict["roomPrefab"];
-        this.roomPrefab.active = false;
-
         Game.UIManager.btnMethodBind(this.nodeDict["quit"], "quit", this);
+        Game.UIManager.btnMethodBind(this.nodeDict["refresh"], "refresh", this);
 
         this.rooms = [];
 
-        clientEvent.on(clientEvent.eventType.getRoomListResponse, this.getRoomListResponse, this);
         clientEvent.on(clientEvent.eventType.joinRoomResponse, this.joinRoomResponse, this);
         clientEvent.on(clientEvent.eventType.getRoomListExResponse, this.getRoomListExResponse, this);
 
         this.getRoomList();
-        this.roomRqId = setInterval(function() {
-            this.getRoomList();
-        }.bind(this), 5000);
+    },
+
+    refresh: function() {
+        this.getRoomList();
     },
 
     getRoomList: function() {
@@ -36,25 +35,6 @@ cc.Class({
         mvs.engine.getRoomListEx(filter);
     },
 
-    getRoomListResponse: function(data) {
-        for (var j = 0; j < this.rooms.length; j++) {
-            this.rooms[j].destroy();
-        }
-        this.rooms = [];
-        data.roomInfos.sort(function(a, b) {
-            return a.roomID - b.roomID;
-        });
-        for (var i = 0; i < data.roomInfos.length; i++) {
-            var room = cc.instantiate(this.roomPrefab);
-            room.active = true;
-            room.parent = this.roomPrefab.parent;
-            var roomScript = room.getComponent('roomInfo');
-            roomScript.setData(data.roomInfos[i]);
-
-            this.rooms.push(room);
-        }
-    },
-
     getRoomListExResponse: function(data) {
         for (var j = 0; j < this.rooms.length; j++) {
             this.rooms[j].destroy();
@@ -69,6 +49,21 @@ cc.Class({
             roomScript.setData(data.rsp.roomAttrs[i]);
 
             this.rooms.push(room);
+        }
+        this.resetComponentLink();
+    },
+
+    resetComponentLink: function() {
+        this.componentLink();
+        this.componentIndex = 0;
+        for (var i = 0; i < this.componentDict.length; i++) {
+            if (this.componentDict[i] === this.defaultBtn) {
+                this.componentIndex = i;
+                break;
+            }
+        }
+        if (this.componentDict[this.componentIndex] instanceof cc.Button) {
+            this.componentDict[this.componentIndex].node.getComponent(cc.Sprite).spriteFrame = this.componentDict[this.componentIndex].hoverSprite;
         }
     },
 
@@ -97,6 +92,7 @@ cc.Class({
     joinRoomResponse: function(data) {
         if (data.status !== 200) {
             console.log('进入房间失败,异步回调错误码: ' + data.status);
+            uiFunc.options
         } else {
             console.log('进入房间成功');
             console.log('房间号: ' + data.roomInfo.roomID);
@@ -131,7 +127,6 @@ cc.Class({
             wx.hideKeyboard();
         }
         clearInterval(this.roomRqId);
-        clientEvent.off(clientEvent.eventType.getRoomListResponse, this.getRoomListResponse, this);
         clientEvent.off(clientEvent.eventType.joinRoomResponse, this.joinRoomResponse, this);
         clientEvent.off(clientEvent.eventType.getRoomListExResponse, this.getRoomListExResponse, this);
     }

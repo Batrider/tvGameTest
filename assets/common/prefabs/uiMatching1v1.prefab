@@ -1497,6 +1497,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "defaultBtn": {
+      "__id__": 14
+    },
     "playerIcons": [
       {
         "__id__": 16

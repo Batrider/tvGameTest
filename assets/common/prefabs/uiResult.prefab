@@ -2207,9 +2207,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 214,
+      "g": 214,
+      "b": 214,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -2423,6 +2423,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "defaultBtn": {
+      "__id__": 77
+    },
     "winAudio": {
       "__uuid__": "1ceb701f-3aa5-45a6-9daf-c261fabbecbf"
     },

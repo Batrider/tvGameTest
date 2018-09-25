@@ -2392,9 +2392,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 184,
-      "g": 184,
-      "b": 184,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -2415,7 +2415,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 7,
-      "y": -197
+      "y": -174
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3460,6 +3460,9 @@
       "__id__": 1
     },
     "_enabled": true,
+    "defaultBtn": {
+      "__id__": 78
+    },
     "rankPrefab": {
       "__id__": 83
     },

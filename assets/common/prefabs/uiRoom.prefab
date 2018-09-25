@@ -377,7 +377,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "key_startGame",
+    "_name": "key_quit",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -426,7 +426,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 260,
+      "x": -260,
       "y": -260
     },
     "_skewX": 0,
@@ -471,7 +471,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 160,
+      "width": 80,
       "height": 40
     },
     "_rotationX": 0,
@@ -506,7 +506,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "开始游戏",
+    "_N$string": "离开",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -520,7 +520,7 @@
     "asset": {
       "__uuid__": "27fa5e8c-6a49-4ff1-a347-6435c52349b6"
     },
-    "fileId": "a4qPDsCTdL1Lwjf0DvykzF",
+    "fileId": "20isaZdTJNGY7IGfl5CgUR",
     "sync": false
   },
   {
@@ -567,9 +567,9 @@
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 126,
-      "g": 243,
-      "b": 168,
+      "r": 153,
+      "g": 241,
+      "b": 195,
       "a": 255
     },
     "duration": 0.1,
@@ -609,12 +609,12 @@
     "asset": {
       "__uuid__": "27fa5e8c-6a49-4ff1-a347-6435c52349b6"
     },
-    "fileId": "86vO5vF4hDXZwoxV3nANKt",
+    "fileId": "52/gbBTkpMo7/fj99zHd1q",
     "sync": false
   },
   {
     "__type__": "cc.Node",
-    "_name": "key_quit",
+    "_name": "key_startGame",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -663,7 +663,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -260,
+      "x": 260,
       "y": -260
     },
     "_skewX": 0,
@@ -708,7 +708,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 80,
+      "width": 160,
       "height": 40
     },
     "_rotationX": 0,
@@ -743,7 +743,7 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "离开",
+    "_N$string": "开始游戏",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
@@ -757,7 +757,7 @@
     "asset": {
       "__uuid__": "27fa5e8c-6a49-4ff1-a347-6435c52349b6"
     },
-    "fileId": "20isaZdTJNGY7IGfl5CgUR",
+    "fileId": "a4qPDsCTdL1Lwjf0DvykzF",
     "sync": false
   },
   {
@@ -804,9 +804,9 @@
     },
     "hoverColor": {
       "__type__": "cc.Color",
-      "r": 153,
-      "g": 241,
-      "b": 195,
+      "r": 126,
+      "g": 243,
+      "b": 168,
       "a": 255
     },
     "duration": 0.1,
@@ -846,7 +846,7 @@
     "asset": {
       "__uuid__": "27fa5e8c-6a49-4ff1-a347-6435c52349b6"
     },
-    "fileId": "52/gbBTkpMo7/fj99zHd1q",
+    "fileId": "86vO5vF4hDXZwoxV3nANKt",
     "sync": false
   },
   {
@@ -2644,9 +2644,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 214,
+      "g": 214,
+      "b": 214,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -2941,7 +2941,10 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true
+    "_enabled": true,
+    "defaultBtn": {
+      "__id__": 22
+    }
   },
   {
     "__type__": "cc.PrefabInfo",
