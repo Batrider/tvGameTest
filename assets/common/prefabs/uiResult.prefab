@@ -2360,7 +2360,7 @@
       "__id__": 72
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 211,
@@ -2394,12 +2394,24 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": null,
-    "_N$pressedSprite": null,
-    "pressedSprite": null,
-    "_N$hoverSprite": null,
-    "hoverSprite": null,
-    "_N$disabledSprite": null,
+    "_N$normalSprite": {
+      "__uuid__": "9d2f5e25-a322-444e-a81b-73b469a0edeb"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "9d2f5e25-a322-444e-a81b-73b469a0edeb"
+    },
+    "pressedSprite": {
+      "__uuid__": "9d2f5e25-a322-444e-a81b-73b469a0edeb"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "2f075bed-b103-4469-bc49-97fd6ea60954"
+    },
+    "hoverSprite": {
+      "__uuid__": "2f075bed-b103-4469-bc49-97fd6ea60954"
+    },
+    "_N$disabledSprite": {
+      "__uuid__": "9d2f5e25-a322-444e-a81b-73b469a0edeb"
+    },
     "_N$target": {
       "__id__": 72
     }

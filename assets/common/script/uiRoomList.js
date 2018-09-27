@@ -37,6 +37,7 @@ cc.Class({
 
     getRoomListExResponse: function(data) {
         for (var j = 0; j < this.rooms.length; j++) {
+            this.rooms[j].active = false;
             this.rooms[j].destroy();
         }
         this.rooms = [];
@@ -121,11 +122,6 @@ cc.Class({
     },
 
     onDestroy() {
-        if (window.wx) {
-            wx.offKeyboardComplete();
-            wx.offKeyboardInput();
-            wx.hideKeyboard();
-        }
         clearInterval(this.roomRqId);
         clientEvent.off(clientEvent.eventType.joinRoomResponse, this.joinRoomResponse, this);
         clientEvent.off(clientEvent.eventType.getRoomListExResponse, this.getRoomListExResponse, this);

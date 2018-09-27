@@ -367,7 +367,7 @@
       "__id__": 9
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 238,
@@ -525,7 +525,7 @@
       "__id__": 13
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 228,
@@ -683,7 +683,7 @@
       "__id__": 17
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 228,
@@ -1114,7 +1114,7 @@
       "__id__": 27
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 235,

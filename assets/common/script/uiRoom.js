@@ -33,6 +33,21 @@ cc.Class({
             roomUserInfo.init();
             this.players.push(roomUserInfo);
         }
+        this.resetComponentLink();
+    },
+
+    resetComponentLink: function() {
+        this.componentLink();
+        this.componentIndex = 0;
+        for (var i = 0; i < this.componentDict.length; i++) {
+            if (this.componentDict[i] === this.defaultBtn) {
+                this.componentIndex = i;
+                break;
+            }
+        }
+        if (this.componentDict[this.componentIndex] instanceof cc.Button) {
+            this.componentDict[this.componentIndex].node.getComponent(cc.Sprite).spriteFrame = this.componentDict[this.componentIndex].hoverSprite;
+        }
     },
 
     kickPlayerResponse: function(data) {
@@ -46,6 +61,7 @@ cc.Class({
             GLB.isRoomOwner = false;
             uiFunc.closeUI(this.node.name);
         }
+        this.resetComponentLink();
     },
 
     kickPlayerNotify: function(data) {

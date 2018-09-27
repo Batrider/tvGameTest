@@ -729,7 +729,7 @@
       "__id__": 21
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 216,
@@ -956,7 +956,7 @@
       "__uuid__": "55d9a406-e65c-430f-be8a-df91cbe12de5"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -978,7 +978,7 @@
       "__id__": 25
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 211,
@@ -1012,12 +1012,24 @@
       "b": 124,
       "a": 255
     },
-    "_N$normalSprite": null,
-    "_N$pressedSprite": null,
-    "pressedSprite": null,
-    "_N$hoverSprite": null,
-    "hoverSprite": null,
-    "_N$disabledSprite": null,
+    "_N$normalSprite": {
+      "__uuid__": "55d9a406-e65c-430f-be8a-df91cbe12de5"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "55d9a406-e65c-430f-be8a-df91cbe12de5"
+    },
+    "pressedSprite": {
+      "__uuid__": "55d9a406-e65c-430f-be8a-df91cbe12de5"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "e793e7e0-69eb-49d1-9573-c4b6c96b60bc"
+    },
+    "hoverSprite": {
+      "__uuid__": "e793e7e0-69eb-49d1-9573-c4b6c96b60bc"
+    },
+    "_N$disabledSprite": {
+      "__uuid__": "55d9a406-e65c-430f-be8a-df91cbe12de5"
+    },
     "_N$target": {
       "__id__": 25
     }
@@ -1215,7 +1227,7 @@
       "__id__": 32
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 207,
@@ -1442,7 +1454,7 @@
       "__uuid__": "ec06b584-8b62-46eb-a987-a0a9d8a557fc"
     },
     "_type": 1,
-    "_sizeMode": 2,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -1464,7 +1476,7 @@
       "__id__": 39
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 214,
@@ -1691,7 +1703,7 @@
       "__uuid__": "ec06b584-8b62-46eb-a987-a0a9d8a557fc"
     },
     "_type": 1,
-    "_sizeMode": 2,
+    "_sizeMode": 0,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -1713,7 +1725,7 @@
       "__id__": 46
     },
     "_enabled": true,
-    "transition": 1,
+    "transition": 2,
     "pressedColor": {
       "__type__": "cc.Color",
       "r": 206,
