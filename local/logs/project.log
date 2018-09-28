@@ -1,102 +1,56 @@
-2018-09-28T01:41:32.066Z - normal: Load ~/.CocosCreator/settings.json
-2018-09-28T01:41:32.070Z - normal: checking language setting...
-2018-09-28T01:41:32.070Z - normal: Language: zh
-2018-09-28T01:41:32.527Z - success: protocol editor-framework registered
-2018-09-28T01:41:32.527Z - success: protocol app registered
-2018-09-28T01:41:32.528Z - success: protocol theme registered
-2018-09-28T01:41:32.528Z - success: protocol packages registered
-2018-09-28T01:41:32.528Z - success: protocol unpack registerred
-2018-09-28T01:41:32.528Z - success: protocol disable-commonjs registerred
-2018-09-28T01:41:32.722Z - normal: connected!
-2018-09-28T01:41:32.724Z - normal: Check project /Users/mac/matchvsTvFramework
-2018-09-28T01:41:32.733Z - normal: Initializing Cocos2d
-2018-09-28T01:41:32.888Z - normal: Initializing Asset Database
-2018-09-28T01:41:32.907Z - success: protocol uuid registerred
-2018-09-28T01:41:32.907Z - success: protocol db registerred
-2018-09-28T01:41:32.907Z - success: protocol thumbnail registerred
-2018-09-28T01:41:32.907Z - normal: Loading editor/builtin packages
-2018-09-28T01:41:32.918Z - success: anysdk loaded
-2018-09-28T01:41:32.991Z - success: assets loaded
-2018-09-28T01:41:32.993Z - success: builder loaded
-2018-09-28T01:41:32.994Z - success: cocos-analytics loaded
-2018-09-28T01:41:32.996Z - success: console loaded
-2018-09-28T01:41:33.017Z - success: fb-instant-games loaded
-2018-09-28T01:41:33.020Z - success: hierarchy loaded
-2018-09-28T01:41:33.023Z - success: inspector loaded
-2018-09-28T01:41:33.024Z - success: keystore loaded
-2018-09-28T01:41:33.026Z - success: node-library loaded
-2018-09-28T01:41:33.027Z - success: package-asset loaded
-2018-09-28T01:41:33.028Z - success: preferences loaded
-2018-09-28T01:41:33.030Z - success: project-exporter loaded
-2018-09-28T01:41:33.040Z - success: project-importer loaded
-2018-09-28T01:41:33.041Z - success: project-settings loaded
-2018-09-28T01:41:33.046Z - success: ui-kit loaded
-2018-09-28T01:41:33.049Z - success: ui-grid loaded
-2018-09-28T01:41:33.052Z - success: scene loaded
-2018-09-28T01:41:33.053Z - success: sprite-editor loaded
-2018-09-28T01:41:33.055Z - success: store loaded
-2018-09-28T01:41:33.059Z - success: timeline loaded
-2018-09-28T01:41:33.059Z - normal: Loading builtin packages
-2018-09-28T01:41:33.062Z - success: asset-db-debugger loaded
-2018-09-28T01:41:33.063Z - success: color-picker loaded
-2018-09-28T01:41:33.066Z - success: package-manager loaded
-2018-09-28T01:41:33.067Z - success: qqplay-adapter loaded
-2018-09-28T01:41:33.071Z - success: sdkbox loaded
-2018-09-28T01:41:33.074Z - success: tester loaded
-2018-09-28T01:41:33.077Z - success: ui-kit-preview-extra loaded
-2018-09-28T01:41:33.079Z - success: ui-kit-preview loaded
-2018-09-28T01:41:33.082Z - success: ui-tree loaded
-2018-09-28T01:41:33.083Z - success: weapp-adapter loaded
-2018-09-28T01:41:33.683Z - normal: Initializing project /Users/mac/matchvsTvFramework
-2018-09-28T01:41:33.687Z - normal: Loading packages
-2018-09-28T01:41:33.696Z - success: plugin-matchvs loaded
-2018-09-28T01:41:33.698Z - error: Failed to add menu to 扩展,
-          a menu item 扩展/Matchvs you tried to add already exists
-    at Menu.add (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/main/menu.js:1:4608)
-    at Object.MainMenu.add (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/main/main-menu.js:1:4273)
-    at Async.series.a (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/main/package.js:1:2770)
-    at /Applications/CocosCreator 2.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:718:13
-    at Immediate.iterate (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:262:13)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
-2018-09-28T01:41:33.698Z - failed: Failed to load panel "panel" from "plugin-matchvs", the panelID plugin-matchvs already exists
-2018-09-28T01:41:33.698Z - failed: [db-task][mount] Exception  Error: Failed to mount /Users/mac/matchvsTvFramework/packages/plugin-matchvs/matchvs/matchvsjssdk to plugin-matchvs-js, already exists!
-    at s.ED.throw.AssetDB.throw (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/lib/utils.js:1:1275)
-    at _checkIfMountValid (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/lib/tasks.js:1:328)
-    at s.Tasks.mount (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/lib/tasks.js:1:10903)
-    at _tasks.n.queue (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/index.js:1:1866)
-    at /Applications/CocosCreator 2.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
-    at Immediate.process (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
-2018-09-28T01:41:33.699Z - warn: Mount runtime resource failed. message: Error: Failed to mount /Users/mac/matchvsTvFramework/packages/plugin-matchvs/matchvs/matchvsjssdk to plugin-matchvs-js, already exists!
-    at s.ED.throw.AssetDB.throw (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/lib/utils.js:1:1275)
-    at _checkIfMountValid (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/lib/tasks.js:1:328)
-    at s.Tasks.mount (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/lib/tasks.js:1:10903)
-    at _tasks.n.queue (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/asset-db/index.js:1:1866)
-    at /Applications/CocosCreator 2.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:987:13
-    at Immediate.process (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/node_modules/async/lib/async.js:953:21)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
-2018-09-28T01:41:33.699Z - success: plugin-matchvs loaded
-2018-09-28T01:41:33.699Z - normal: Watching packages
-2018-09-28T01:41:33.778Z - normal: Run Application
-2018-09-28T01:41:34.262Z - success: preview server running at http://localhost:7456
-2018-09-28T01:41:39.064Z - normal: 1.9.3
-2018-09-28T03:43:07.585Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:137867
-2018-09-28T03:43:07.586Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:137869
-2018-09-28T05:52:24.732Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:207786
-2018-09-28T05:52:24.735Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:207788
-2018-09-28T05:54:48.485Z - error: unknown color: 
-    at window.onerror (file:///Applications/CocosCreator%202.app/Contents/Resources/app.asar/editor/page/app-main.js:1:1560)
-    at Object.DomUtils.fire (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:2081)
-    at HTMLElement._onInputConfirm (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/input.js:1:2935)
-    at HTMLInputElement.e.addEventListener.t (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/behaviors/input-state.js:1:936)
-    at HTMLElement._showColorPicker (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/color.js:1:4288)
-    at HTMLElement._hideFn.e (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/color.js:1:2958)
-    at Object.DomUtils.fire (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/utils/dom-utils.js:1:2081)
-    at HTMLElement.hide (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/color-picker.js:1:3556)
-    at _showing.DomUtils.addHitGhost (/Applications/CocosCreator 2.app/Contents/Resources/app.asar/editor-framework/lib/renderer/ui/elements/color.js:1:3805)
+2018-09-28T06:18:46.649Z - normal: Load ~/.CocosCreator/settings.json
+2018-09-28T06:18:46.652Z - normal: checking language setting...
+2018-09-28T06:18:46.652Z - normal: Language: zh
+2018-09-28T06:18:47.471Z - success: protocol editor-framework registered
+2018-09-28T06:18:47.471Z - success: protocol app registered
+2018-09-28T06:18:47.471Z - success: protocol theme registered
+2018-09-28T06:18:47.471Z - success: protocol packages registered
+2018-09-28T06:18:47.472Z - success: protocol unpack registerred
+2018-09-28T06:18:47.472Z - success: protocol disable-commonjs registerred
+2018-09-28T06:18:47.726Z - normal: connected!
+2018-09-28T06:18:47.727Z - normal: Check project /Users/mac/MatchVsIPTV/tvGameTest
+2018-09-28T06:18:47.730Z - normal: Initializing Cocos2d
+2018-09-28T06:18:47.947Z - normal: Initializing Asset Database
+2018-09-28T06:18:47.979Z - success: protocol uuid registerred
+2018-09-28T06:18:47.979Z - success: protocol db registerred
+2018-09-28T06:18:47.979Z - success: protocol thumbnail registerred
+2018-09-28T06:18:47.979Z - normal: Loading editor/builtin packages
+2018-09-28T06:18:48.007Z - success: anysdk loaded
+2018-09-28T06:18:48.131Z - success: assets loaded
+2018-09-28T06:18:48.135Z - success: builder loaded
+2018-09-28T06:18:48.137Z - success: cocos-analytics loaded
+2018-09-28T06:18:48.143Z - success: console loaded
+2018-09-28T06:18:48.176Z - success: fb-instant-games loaded
+2018-09-28T06:18:48.180Z - success: hierarchy loaded
+2018-09-28T06:18:48.187Z - success: inspector loaded
+2018-09-28T06:18:48.189Z - success: keystore loaded
+2018-09-28T06:18:48.196Z - success: node-library loaded
+2018-09-28T06:18:48.198Z - success: package-asset loaded
+2018-09-28T06:18:48.199Z - success: preferences loaded
+2018-09-28T06:18:48.203Z - success: project-exporter loaded
+2018-09-28T06:18:48.220Z - success: project-importer loaded
+2018-09-28T06:18:48.223Z - success: project-settings loaded
+2018-09-28T06:18:48.229Z - success: ui-kit loaded
+2018-09-28T06:18:48.235Z - success: ui-grid loaded
+2018-09-28T06:18:48.240Z - success: scene loaded
+2018-09-28T06:18:48.241Z - success: sprite-editor loaded
+2018-09-28T06:18:48.246Z - success: store loaded
+2018-09-28T06:18:48.252Z - success: timeline loaded
+2018-09-28T06:18:48.252Z - normal: Loading builtin packages
+2018-09-28T06:18:48.257Z - success: asset-db-debugger loaded
+2018-09-28T06:18:48.258Z - success: color-picker loaded
+2018-09-28T06:18:48.262Z - success: package-manager loaded
+2018-09-28T06:18:48.264Z - success: qqplay-adapter loaded
+2018-09-28T06:18:48.330Z - success: sdkbox loaded
+2018-09-28T06:18:48.337Z - success: tester loaded
+2018-09-28T06:18:48.342Z - success: ui-kit-preview-extra loaded
+2018-09-28T06:18:48.346Z - success: ui-kit-preview loaded
+2018-09-28T06:18:48.350Z - success: ui-tree loaded
+2018-09-28T06:18:48.352Z - success: weapp-adapter loaded
+2018-09-28T06:18:49.433Z - normal: Initializing project /Users/mac/MatchVsIPTV/tvGameTest
+2018-09-28T06:18:49.436Z - normal: Loading packages
+2018-09-28T06:18:49.448Z - success: plugin-matchvs loaded
+2018-09-28T06:18:49.448Z - normal: Watching packages
+2018-09-28T06:18:49.578Z - normal: Run Application
+2018-09-28T06:19:04.426Z - success: preview server running at http://localhost:7458
+2018-09-28T06:19:11.132Z - normal: 1.9.3
